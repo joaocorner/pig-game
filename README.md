@@ -15,6 +15,7 @@ Projeto desenvolvido para melhorar os conceitos em React.
     - [Rode na sua máquina](#rode-na-sua-máquina)
     - [Aprenda mais em...](#aprenda-mais-em)
   - [Autor](#autor)
+  - [Lista de tarefas](#lista-de-tarefas)
 
 ## Meu processo
 
@@ -45,3 +46,15 @@ Se houver algum erro, irá ser reportado no console.
 
 - Github - [joaocorner](https://github.com/joaocorner)
 - LinkedIn - [joaoeduardocorner](https://www.linkedin.com/in/joaoeduardocorner/)
+
+## Lista de tarefas
+
+- [x] Ao clicar, gerar número aleatório
+- [x] Mostrar número sorteado
+- [x] Armazenar o número gerado
+- [ ] Mostrar a imagem do dado
+- [ ] Caso seja o número um, descartar os pontos da rodada
+- [ ] Caso o jogador passe a vez, salvar os pontos acumulados no placar dele
+- [ ] Chegando em 100 pontos anunciar o vencedor
+- [ ] Reiniciar o jogo
+- [ ] Site responsivo
