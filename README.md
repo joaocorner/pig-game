@@ -57,4 +57,7 @@ Se houver algum erro, irá ser reportado no console.
 - [ ] Caso o jogador passe a vez, salvar os pontos acumulados no placar dele
 - [ ] Chegando em 100 pontos anunciar o vencedor
 - [ ] Reiniciar o jogo
-- [ ] Site responsivo
+- [ ] Criar Layout
+  - [ ] Site responsivo
+- [ ] Modal explicando as regras
+- [ ] Oponente sendo IA
