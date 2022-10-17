@@ -5,7 +5,7 @@ function App() {
   const [placarJogadorUm, setPlacarJogadorUm] = useState(0);
   const [placarJogadorDois, setPlacarJogadorDois] = useState(0);
   const [placarRodada, setPlacarRodada] = useState(0);
-  const [numeroGerado, setNumeroGerado] = useState("");
+  const [numeroGerado, setNumeroGerado] = useState(0);
   const [vezAtual, setVezAtual] = useState(false);
 
   // gera um número entre 1 e 6
@@ -22,11 +22,13 @@ function App() {
     <div className="App">
       <h1>Pig Game</h1>
       <button onClick={gerarNumeroAleatorio}>Role os dados!</button>
-      <img
-        src={process.env.PUBLIC_URL + `/img/dice-${numeroGerado}.png`}
-        style={{ width: "100px", height: "100px" }}
-        alt="valor gerado pelo dado"
-      />
+      {numeroGerado && (
+        <img
+          src={process.env.PUBLIC_URL + `/img/dice-${numeroGerado}.png`}
+          style={{ width: "100px", height: "100px" }}
+          alt="valor gerado pelo dado"
+        />
+      )}
 
       {!vezAtual && <p>Jogador um rodada: {placarRodada}</p>}
       {vezAtual && <p>Jogador dois rodada: {placarRodada}</p>}
