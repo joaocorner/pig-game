@@ -49,7 +49,7 @@ Se houver algum erro, irá ser reportado no console.
 
 ## Lista de tarefas
 
-- [ ] Ao clicar em Rolar os Dados:
+- [x] Ao clicar em Rolar os Dados:
   - [x] Gerar número aleatório
   - [x] Mostrar número sorteado
   - [x] Armazenar o número gerado
@@ -62,7 +62,7 @@ Se houver algum erro, irá ser reportado no console.
     - [x] Passa a vez
   ***
 - [ ] Caso o jogador clique em passar a vez:
-  - [ ] Salvar os pontos acumulados da rodada no placar dele
+  - [x] Salvar os pontos acumulados da rodada no placar dele
   - [ ] O placar é maior que 100 pontos?
     - [ ] Se sim, o jogador venceu
     - [ ] Se não, passa a vez

@@ -24,10 +24,19 @@ function App() {
     }
   };
 
+  const passarVez = () => {
+    if (!vezAtual) {
+      setPlacarJogadorUm(placarJogadorUm + placarRodada);
+    } else {
+      setPlacarJogadorDois(placarJogadorDois + placarRodada);
+    }
+  };
+
   return (
     <div className="App">
       <h1>Pig Game</h1>
       <button onClick={gerarNumeroAleatorio}>Role os dados!</button>
+      <br />
       {numeroGerado === 0 ? (
         ""
       ) : (
@@ -43,6 +52,7 @@ function App() {
 
       <p>Jogador um: {placarJogadorUm}</p>
       <p>Jogador dois: {placarJogadorDois}</p>
+      <button onClick={passarVez}>Passar vez</button>
     </div>
   );
 }
