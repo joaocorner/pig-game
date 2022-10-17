@@ -49,15 +49,30 @@ Se houver algum erro, irá ser reportado no console.
 
 ## Lista de tarefas
 
-- [x] Ao clicar, gerar número aleatório
-- [x] Mostrar número sorteado
-- [x] Armazenar o número gerado
-- [ ] Mostrar a imagem do dado
-- [ ] Caso seja o número um, descartar os pontos da rodada
-- [ ] Caso o jogador passe a vez, salvar os pontos acumulados no placar dele
-- [ ] Chegando em 100 pontos anunciar o vencedor
-- [ ] Reiniciar o jogo
+- [ ] Ao clicar em Rolar os Dados:
+  - [x] Gerar número aleatório
+  - [x] Mostrar número sorteado
+  - [x] Armazenar o número gerado
+  - [ ] Mostrar a imagem do dado
+  - [ ] Se não for 1:
+    - [ ] Adicionar o valor na pontuação da rodada
+    - [ ] Exibir novo resultado
+  - [ ] Se for 1:
+    - [ ] Descartar os pontos da rodada
+    - [ ] Passa a vez
+  ***
+- [ ] Caso o jogador clique em passar a vez:
+  - [ ] Salvar os pontos acumulados da rodada no placar dele
+  - [ ] O placar é maior que 100 pontos?
+    - [ ] Se sim, o jogador venceu
+    - [ ] Se não, passa a vez
+  ***
+- [ ] Caso clique em reiniciar o jogo
+  - [ ] Placar geral é zerado
+  - [ ] Jogador inicial volta a ser o jogador 1
+  ***
+  Em paralelo:
 - [ ] Criar Layout
-  - [ ] Site responsivo
+  - [ ] Responsivo
 - [ ] Modal explicando as regras
 - [ ] Oponente sendo IA
