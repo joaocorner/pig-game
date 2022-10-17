@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import "./App.css";
 
 function App() {
@@ -8,23 +8,20 @@ function App() {
   const [numeroGerado, setNumeroGerado] = useState(0);
   const [vezAtual, setVezAtual] = useState(false);
 
-  useEffect(() => {
-    if (numeroGerado !== 1) {
-      // armazena a pontuação antiga na rodada com o valor atual
-      setPlacarRodada(placarRodada + numeroGerado);
-    } else {
-      setPlacarRodada(0);
-    }
-  }, [numeroGerado]);
+  // gera um número entre 1 e 6
+  const gerarNumeroAleatorio = () => {
+    const aleatorio = Math.floor(Math.random() * 6) + 1;
+    // armazena o número gerado
+    setNumeroGerado(aleatorio);
+
+    // armazena a pontuação antiga na rodada com o valor atual
+    setPlacarRodada(placarRodada + aleatorio);
+  };
 
   return (
     <div className="App">
       <h1>Pig Game</h1>
-      <button
-        onClick={() => setNumeroGerado(Math.floor(Math.random() * 6) + 1)}
-      >
-        Role os dados!
-      </button>
+      <button onClick={gerarNumeroAleatorio}>Role os dados!</button>
       {numeroGerado === 0 ? (
         ""
       ) : (
