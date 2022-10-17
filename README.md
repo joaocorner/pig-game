@@ -53,7 +53,7 @@ Se houver algum erro, irá ser reportado no console.
   - [x] Gerar número aleatório
   - [x] Mostrar número sorteado
   - [x] Armazenar o número gerado
-  - [ ] Mostrar a imagem do dado
+  - [x] Mostrar a imagem do dado
   - [ ] Se não for 1:
     - [ ] Adicionar o valor na pontuação da rodada
     - [ ] Exibir novo resultado
