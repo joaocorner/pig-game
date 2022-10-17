@@ -54,11 +54,11 @@ Se houver algum erro, irá ser reportado no console.
   - [x] Mostrar número sorteado
   - [x] Armazenar o número gerado
   - [x] Mostrar a imagem do dado
-  - [ ] Se não for 1:
+  - [x] Se não for 1:
     - [x] Adicionar o valor na pontuação da rodada
-    - [ ] Exibir novo resultado
+    - [x] Exibir novo resultado
   - [ ] Se for 1:
-    - [ ] Descartar os pontos da rodada
+    - [x] Descartar os pontos da rodada
     - [ ] Passa a vez
   ***
 - [ ] Caso o jogador clique em passar a vez:
