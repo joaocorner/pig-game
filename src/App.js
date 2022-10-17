@@ -22,7 +22,9 @@ function App() {
     <div className="App">
       <h1>Pig Game</h1>
       <button onClick={gerarNumeroAleatorio}>Role os dados!</button>
-      {numeroGerado && (
+      {numeroGerado === 0 ? (
+        ""
+      ) : (
         <img
           src={process.env.PUBLIC_URL + `/img/dice-${numeroGerado}.png`}
           style={{ width: "100px", height: "100px" }}
