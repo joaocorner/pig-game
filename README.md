@@ -55,7 +55,7 @@ Se houver algum erro, irá ser reportado no console.
   - [x] Armazenar o número gerado
   - [x] Mostrar a imagem do dado
   - [ ] Se não for 1:
-    - [ ] Adicionar o valor na pontuação da rodada
+    - [x] Adicionar o valor na pontuação da rodada
     - [ ] Exibir novo resultado
   - [ ] Se for 1:
     - [ ] Descartar os pontos da rodada

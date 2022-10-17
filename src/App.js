@@ -4,12 +4,18 @@ import "./App.css";
 function App() {
   const [placarJogadorUm, setPlacarJogadorUm] = useState(0);
   const [placarJogadorDois, setPlacarJogadorDois] = useState(0);
+  const [placarRodada, setPlacarRodada] = useState(0);
   const [numeroGerado, setNumeroGerado] = useState("");
+  const [vezAtual, setVezAtual] = useState(false);
 
   // gera um número entre 1 e 6
   const gerarNumeroAleatorio = () => {
     const aleatorio = Math.floor(Math.random() * 6) + 1;
+    // armazena o número gerado
     setNumeroGerado(aleatorio);
+
+    // armazena a pontuação antiga na rodada com o valor atual
+    setPlacarRodada(placarRodada + numeroGerado);
   };
 
   return (
@@ -21,6 +27,10 @@ function App() {
         style={{ width: "100px", height: "100px" }}
         alt="valor gerado pelo dado"
       />
+
+      {!vezAtual && <p>Jogador um rodada: {placarRodada}</p>}
+      {vezAtual && <p>Jogador dois rodada: {placarRodada}</p>}
+
       <p>Jogador um: {placarJogadorUm}</p>
       <p>Jogador dois: {placarJogadorDois}</p>
     </div>
