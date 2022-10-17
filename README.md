@@ -57,9 +57,9 @@ Se houver algum erro, irá ser reportado no console.
   - [x] Se não for 1:
     - [x] Adicionar o valor na pontuação da rodada
     - [x] Exibir novo resultado
-  - [ ] Se for 1:
+  - [x] Se for 1:
     - [x] Descartar os pontos da rodada
-    - [ ] Passa a vez
+    - [x] Passa a vez
   ***
 - [ ] Caso o jogador clique em passar a vez:
   - [ ] Salvar os pontos acumulados da rodada no placar dele

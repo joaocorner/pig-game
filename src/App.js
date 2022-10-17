@@ -16,6 +16,12 @@ function App() {
 
     // armazena a pontuação antiga na rodada com o valor atual
     setPlacarRodada(placarRodada + aleatorio);
+
+    // descarta os pontos caso aleatorio seja 1 e passa a vez
+    if (aleatorio === 1) {
+      setPlacarRodada(0);
+      setVezAtual(!vezAtual);
+    }
   };
 
   return (
