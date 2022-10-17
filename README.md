@@ -65,7 +65,7 @@ Se houver algum erro, irá ser reportado no console.
   - [x] Salvar os pontos acumulados da rodada no placar dele
   - [ ] O placar é maior que 100 pontos?
     - [ ] Se sim, o jogador venceu
-    - [ ] Se não, passa a vez
+    - [x] Se não, passa a vez
   ***
 - [ ] Caso clique em reiniciar o jogo
   - [ ] Placar geral é zerado

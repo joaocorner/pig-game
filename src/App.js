@@ -25,10 +25,17 @@ function App() {
   };
 
   const passarVez = () => {
+    // salva os pontos na vez do jogador que passou
     if (!vezAtual) {
       setPlacarJogadorUm(placarJogadorUm + placarRodada);
+      if (placarJogadorUm <= 100) {
+        setVezAtual(!vezAtual);
+      }
     } else {
       setPlacarJogadorDois(placarJogadorDois + placarRodada);
+      if (placarJogadorDois <= 100) {
+        setVezAtual(!vezAtual);
+      }
     }
   };
 
