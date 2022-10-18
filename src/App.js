@@ -65,6 +65,12 @@ function App() {
   return (
     <div className="App">
       <h1>Pig Game</h1>
+      <img
+        src={process.env.PUBLIC_URL + `/img/pig.png`}
+        style={{ width: "300px", height: "300px" }}
+        alt="porco de óculos e gravata em cartoon segurando um dado"
+      />
+      <br />
       <button className="" onClick={gerarNumeroAleatorio} disabled={fimDeJogo}>
         Role os dados!
       </button>
