@@ -66,12 +66,15 @@ Se houver algum erro, irá ser reportado no console.
   - [x] O placar é maior que 100 pontos?
     - [x] Se sim, o jogador venceu
       - [x] Bloquear os botões
+      - [x] Ocultar a pontuação da rodada
     - [x] Se não, passa a vez
   - [x] Zerar o placar da rodada
   ***
-- [ ] Caso clique em reiniciar o jogo
-  - [ ] Placar geral é zerado
-  - [ ] Jogador inicial volta a ser o jogador 1
+- [x] Caso clique em reiniciar o jogo
+  - [x] Placar geral é zerado
+  - [x] Jogador inicial volta a ser o jogador 1
+  - [x] Mensagem de vitória some
+  - [x] Zera o valor do dado
   ***
   Em paralelo:
 - [ ] Criar Layout

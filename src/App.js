@@ -53,6 +53,15 @@ function App() {
     setPlacarRodada(0);
   };
 
+  const jogarNovamente = () => {
+    setFimDeJogo(false);
+    setMensagem("");
+    setNumeroGerado(0);
+    setPlacarJogadorUm(0);
+    setPlacarJogadorDois(0);
+    setVezAtual(false);
+  };
+
   return (
     <div className="App">
       <h1>Pig Game</h1>
@@ -70,14 +79,17 @@ function App() {
         />
       )}
 
-      {!vezAtual && <p>Jogador um rodada: {placarRodada}</p>}
-      {vezAtual && <p>Jogador dois rodada: {placarRodada}</p>}
+      {!vezAtual && !fimDeJogo && <p>Jogador um rodada: {placarRodada}</p>}
+      {vezAtual && !fimDeJogo && <p>Jogador dois rodada: {placarRodada}</p>}
 
       <p>Jogador um: {placarJogadorUm}</p>
       <p>Jogador dois: {placarJogadorDois}</p>
       <button onClick={passarVez} disabled={fimDeJogo}>
         Passar vez
       </button>
+      <br />
+
+      <button onClick={jogarNovamente}>Reiniciar</button>
       <p>{mensagem}</p>
     </div>
   );
