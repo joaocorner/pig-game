@@ -66,6 +66,7 @@ Se houver algum erro, irá ser reportado no console.
   - [ ] O placar é maior que 100 pontos?
     - [ ] Se sim, o jogador venceu
     - [x] Se não, passa a vez
+  - [x] Zerar o placar da rodada
   ***
 - [ ] Caso clique em reiniciar o jogo
   - [ ] Placar geral é zerado

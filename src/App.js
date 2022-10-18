@@ -37,6 +37,7 @@ function App() {
         setVezAtual(!vezAtual);
       }
     }
+    setPlacarRodada(0);
   };
 
   return (
