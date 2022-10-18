@@ -65,7 +65,7 @@ function App() {
   return (
     <div className="App">
       <h1>Pig Game</h1>
-      <button onClick={gerarNumeroAleatorio} disabled={fimDeJogo}>
+      <button className="" onClick={gerarNumeroAleatorio} disabled={fimDeJogo}>
         Role os dados!
       </button>
       <br />
