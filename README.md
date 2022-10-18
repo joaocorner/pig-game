@@ -65,9 +65,9 @@ Se houver algum erro, irá ser reportado no console.
   - [x] Salvar os pontos acumulados da rodada no placar dele
   - [x] O placar é maior que 100 pontos?
     - [x] Se sim, o jogador venceu
+      - [x] Bloquear os botões
     - [x] Se não, passa a vez
   - [x] Zerar o placar da rodada
-  - [ ] Existindo um vencedor, bloquear os botões
   ***
 - [ ] Caso clique em reiniciar o jogo
   - [ ] Placar geral é zerado

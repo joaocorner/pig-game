@@ -8,6 +8,7 @@ function App() {
   const [numeroGerado, setNumeroGerado] = useState(0);
   const [vezAtual, setVezAtual] = useState(false);
   const [mensagem, setMensagem] = useState("");
+  const [fimDeJogo, setFimDeJogo] = useState(false);
 
   // gera um número entre 1 e 6
   const gerarNumeroAleatorio = () => {
@@ -29,8 +30,10 @@ function App() {
   useEffect(() => {
     if (placarJogadorUm >= 20) {
       setMensagem("Jogador UM venceu!");
+      setFimDeJogo(true);
     } else if (placarJogadorDois >= 20) {
       setMensagem("Jogador DOIS venceu!");
+      setFimDeJogo(true);
     }
   }, [placarRodada]);
 
@@ -53,7 +56,9 @@ function App() {
   return (
     <div className="App">
       <h1>Pig Game</h1>
-      <button onClick={gerarNumeroAleatorio}>Role os dados!</button>
+      <button onClick={gerarNumeroAleatorio} disabled={fimDeJogo}>
+        Role os dados!
+      </button>
       <br />
       {numeroGerado === 0 ? (
         ""
@@ -70,7 +75,9 @@ function App() {
 
       <p>Jogador um: {placarJogadorUm}</p>
       <p>Jogador dois: {placarJogadorDois}</p>
-      <button onClick={passarVez}>Passar vez</button>
+      <button onClick={passarVez} disabled={fimDeJogo}>
+        Passar vez
+      </button>
       <p>{mensagem}</p>
     </div>
   );
