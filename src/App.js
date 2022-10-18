@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./App.css";
 
 function App() {
@@ -7,6 +7,7 @@ function App() {
   const [placarRodada, setPlacarRodada] = useState(0);
   const [numeroGerado, setNumeroGerado] = useState(0);
   const [vezAtual, setVezAtual] = useState(false);
+  const [mensagem, setMensagem] = useState("");
 
   // gera um número entre 1 e 6
   const gerarNumeroAleatorio = () => {
@@ -24,16 +25,25 @@ function App() {
     }
   };
 
+  // anunciando o vencedor
+  useEffect(() => {
+    if (placarJogadorUm >= 20) {
+      setMensagem("Jogador UM venceu!");
+    } else if (placarJogadorDois >= 20) {
+      setMensagem("Jogador DOIS venceu!");
+    }
+  }, [placarRodada]);
+
   const passarVez = () => {
     // salva os pontos na vez do jogador que passou
     if (!vezAtual) {
       setPlacarJogadorUm(placarJogadorUm + placarRodada);
-      if (placarJogadorUm <= 100) {
+      if (placarJogadorUm <= 20) {
         setVezAtual(!vezAtual);
       }
     } else {
       setPlacarJogadorDois(placarJogadorDois + placarRodada);
-      if (placarJogadorDois <= 100) {
+      if (placarJogadorDois <= 20) {
         setVezAtual(!vezAtual);
       }
     }
@@ -61,6 +71,7 @@ function App() {
       <p>Jogador um: {placarJogadorUm}</p>
       <p>Jogador dois: {placarJogadorDois}</p>
       <button onClick={passarVez}>Passar vez</button>
+      <p>{mensagem}</p>
     </div>
   );
 }

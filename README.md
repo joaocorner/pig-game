@@ -61,12 +61,13 @@ Se houver algum erro, irá ser reportado no console.
     - [x] Descartar os pontos da rodada
     - [x] Passa a vez
   ***
-- [ ] Caso o jogador clique em passar a vez:
+- [x] Caso o jogador clique em passar a vez:
   - [x] Salvar os pontos acumulados da rodada no placar dele
-  - [ ] O placar é maior que 100 pontos?
-    - [ ] Se sim, o jogador venceu
+  - [x] O placar é maior que 100 pontos?
+    - [x] Se sim, o jogador venceu
     - [x] Se não, passa a vez
   - [x] Zerar o placar da rodada
+  - [ ] Existindo um vencedor, bloquear os botões
   ***
 - [ ] Caso clique em reiniciar o jogo
   - [ ] Placar geral é zerado
