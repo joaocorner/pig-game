@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import "./App.css";
+import Modal from "./components/Modal";
 
 function App() {
   const [placarJogadorUm, setPlacarJogadorUm] = useState(0);
@@ -9,6 +10,7 @@ function App() {
   const [vezAtual, setVezAtual] = useState(false);
   const [mensagem, setMensagem] = useState("");
   const [fimDeJogo, setFimDeJogo] = useState(false);
+  const [modal, setModal] = useState(false);
 
   // gera um número entre 1 e 6
   const gerarNumeroAleatorio = () => {
@@ -53,6 +55,14 @@ function App() {
     setPlacarRodada(0);
   };
 
+  const fecharModal = () => {
+    setModal(false);
+  };
+
+  const abrirModal = () => {
+    setModal(true);
+  };
+
   const jogarNovamente = () => {
     setFimDeJogo(false);
     setMensagem("");
@@ -65,6 +75,8 @@ function App() {
   return (
     <div className="App">
       <h1>Pig Game</h1>
+      <button onClick={abrirModal}>como jogar</button>
+      <br />
       <img
         src={process.env.PUBLIC_URL + `/img/pig.png`}
         style={{ width: "300px", height: "300px" }}
@@ -96,6 +108,7 @@ function App() {
       <br />
 
       <button onClick={jogarNovamente}>Reiniciar</button>
+      {modal && <Modal fecharModal={fecharModal} />}
       <p>{mensagem}</p>
     </div>
   );

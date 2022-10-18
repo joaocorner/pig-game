@@ -1,6 +1,6 @@
 # Pig Game
 
-É um jogo aonde o objetivo é alcançar 100 pontos antes do seu adversário. Jogue os dados enquanto você quiser e vá somando os pontos, ou até sair o número 1. Se vier o número 1, você perde os pontos somados da rodada. Pra manter os pontos, passe a sua vez.
+É um jogo cujo objetivo é alcançar 100 pontos antes do seu adversário. Jogue os dados enquanto você quiser e vá somando os pontos, ou até sair o número 1. Se vier o número 1, você perde os pontos somados da rodada. Pra manter os pontos, passe a sua vez.
 
 Projeto desenvolvido para melhorar os conceitos em React.
 
@@ -79,5 +79,5 @@ Se houver algum erro, irá ser reportado no console.
   Em paralelo:
 - [ ] Criar Layout
   - [ ] Responsivo
-- [ ] Modal explicando as regras
+- [x] Modal explicando as regras
 - [ ] Oponente sendo IA
