@@ -86,11 +86,11 @@ function App() {
           <button onClick={abrirModal}>como jogar</button>
         </div>
         <div className="partida">
-          <div className={`jogadorUm ${vezAtual ? "" : "vez-atual"}`}>
+          <div className={`jogador-um ${vezAtual ? "" : "vez-atual"}`}>
             <h3>Jogador 1 </h3>
             <h3>{placarJogadorUm}</h3>
           </div>
-          <div className={`jogadorDois ${vezAtual ? "vez-atual" : ""}`}>
+          <div className={`jogador-dois ${vezAtual ? "vez-atual" : ""}`}>
             <h3>Jogador 2 </h3>
             <h3>{placarJogadorDois}</h3>
           </div>
@@ -127,7 +127,7 @@ function App() {
             </button>
             <button onClick={jogarNovamente}>Reiniciar</button>
             {modal && <Modal fecharModal={fecharModal} />}
-            <p className="mensagemFinal">{mensagem}</p>
+            <p className="mensagem-final">{mensagem}</p>
           </div>
         </div>
       </div>

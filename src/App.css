@@ -58,7 +58,7 @@ button:disabled {
   align-items: center;
 }
 
-.jogadorUm {
+.jogador-um {
   width: 20vw;
   order: 1;
 }
@@ -67,7 +67,7 @@ button:disabled {
   color: white;
 }
 
-.jogadorDois {
+.jogador-dois {
   width: 20vw;
   order: 3;
 }
@@ -99,11 +99,11 @@ button:disabled {
   .partida {
     flex-direction: inherit;
   }
-  .jogadorUm {
+  .jogador-um {
     width: 100%;
     order: 1;
   }
-  .jogadorDois {
+  .jogador-dois {
     width: 100%;
     order: 2;
   }
@@ -113,7 +113,7 @@ button:disabled {
     order: 3;
   }
 
-  .mensagemFinal {
+  .mensagem-final {
     padding-bottom: 30px;
   }
 }
