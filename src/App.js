@@ -11,7 +11,7 @@ function App() {
   const [mensagem, setMensagem] = useState("");
   const [fimDeJogo, setFimDeJogo] = useState(false);
   const [modal, setModal] = useState(false);
-  const pontuacaoVitoria = 10;
+  const pontuacaoVitoria = 100;
 
   // gera um número entre 1 e 6
   const gerarNumeroAleatorio = () => {

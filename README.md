@@ -6,6 +6,8 @@ Projeto desenvolvido para melhorar os conceitos em React.
 
 [Confira agora!](https://joaocorner.github.io/pig-game/)
 
+![Demo](https://github.com/joaocorner/pig-game/blob/gh-pages/img/preview.png)
+
 ## Sumário
 
 - [Pig Game](#pig-game)
@@ -33,7 +35,7 @@ Após realizar o download do repositório, na pasta raíz do projeto utilize o c
 O aplicativo irá rodar em modo de desenvolvedor.\
 Abra em [http://localhost:3000](http://localhost:3000) para ver pelo seu browser.
 
-Caso realiza qualquer modificação no projeto, já irá vê-lo em tempo real atualizando.
+Caso realize qualquer modificação no projeto, já irá vê-lo em tempo real atualizando.
 Se houver algum erro, irá ser reportado no console.
 
 ### Aprenda mais em...
