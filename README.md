@@ -6,7 +6,7 @@ Projeto desenvolvido para melhorar os conceitos em React.
 
 [Confira agora!](https://joaocorner.github.io/pig-game/)
 
-![Demo](https://github.com/joaocorner/pig-game/blob/gh-pages/img/preview.png)
+![Demo](https://raw.githubusercontent.com/joaocorner/pig-game/main/public/img/preview.png)
 
 ## Sumário
 
