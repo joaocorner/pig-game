@@ -52,6 +52,9 @@ button:disabled {
   box-shadow: none;
 }
 
+/* .oponente {
+  display: flex;
+} */
 .partida {
   display: flex;
   height: 70vh;

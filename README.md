@@ -82,4 +82,4 @@ Se houver algum erro, irá ser reportado no console.
 - [x] Criar Layout
   - [x] Responsivo
 - [x] Modal explicando as regras
-- [ ] Oponente sendo IA
+- [x] Oponente sendo IA

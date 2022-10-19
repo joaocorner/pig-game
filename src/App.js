@@ -11,6 +11,7 @@ function App() {
   const [mensagem, setMensagem] = useState("");
   const [fimDeJogo, setFimDeJogo] = useState(false);
   const [modal, setModal] = useState(false);
+  const [computador, setComputador] = useState(false);
   const pontuacaoVitoria = 100;
 
   // gera um número entre 1 e 6
@@ -33,12 +34,24 @@ function App() {
   useEffect(() => {
     if (placarJogadorUm >= pontuacaoVitoria) {
       setMensagem("Jogador 1 venceu");
+      setVezAtual(false);
       setFimDeJogo(true);
     } else if (placarJogadorDois >= pontuacaoVitoria) {
       setMensagem("Jogador 2 venceu");
+      setVezAtual(true);
       setFimDeJogo(true);
     }
-  }, [placarRodada]);
+
+    if (computador === true && vezAtual === true && fimDeJogo === false) {
+      setTimeout(() => {
+        gerarNumeroAleatorio();
+
+        if (placarRodada >= 20) {
+          passarVez();
+        }
+      }, 1000);
+    }
+  }, [placarRodada, vezAtual]);
 
   const passarVez = () => {
     // salva os pontos na vez do jogador que passou
@@ -64,6 +77,7 @@ function App() {
     setModal(true);
   };
 
+  // reinicia o jogo para as configurações iniciais
   const jogarNovamente = () => {
     setFimDeJogo(false);
     setMensagem("");
@@ -71,6 +85,10 @@ function App() {
     setPlacarJogadorUm(0);
     setPlacarJogadorDois(0);
     setVezAtual(false);
+  };
+
+  const escolherOponente = () => {
+    setComputador(!computador);
   };
 
   return (
@@ -84,6 +102,16 @@ function App() {
             alt="porco de óculos e gravata em cartoon segurando um dado"
           />
           <button onClick={abrirModal}>como jogar</button>
+          <div className="oponente" onChange={escolherOponente}>
+            <p>jogar contra:</p>
+            <input
+              type="checkbox"
+              name="adversario"
+              id="computador"
+              value="computador"
+            />
+            computador
+          </div>
         </div>
         <div className="partida">
           <div className={`jogador-um ${vezAtual ? "" : "vez-atual"}`}>
