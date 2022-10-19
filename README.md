@@ -83,3 +83,4 @@ Se houver algum erro, irá ser reportado no console.
   - [x] Responsivo
 - [x] Modal explicando as regras
 - [x] Oponente sendo IA
+  - [x] Bloqueio dos botões na vez do computador

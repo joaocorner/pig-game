@@ -12,6 +12,7 @@ function App() {
   const [fimDeJogo, setFimDeJogo] = useState(false);
   const [modal, setModal] = useState(false);
   const [computador, setComputador] = useState(false);
+  const [bloquearBotao, setBloquearBotao] = useState(false);
   const pontuacaoVitoria = 100;
 
   // gera um número entre 1 e 6
@@ -30,26 +31,41 @@ function App() {
     }
   };
 
+  // habilita o modo computador
+  const escolherOponente = () => {
+    setComputador(!computador);
+  };
+
   // anunciando o vencedor
   useEffect(() => {
     if (placarJogadorUm >= pontuacaoVitoria) {
       setMensagem("Jogador 1 venceu");
       setVezAtual(false);
       setFimDeJogo(true);
+      setBloquearBotao(true);
     } else if (placarJogadorDois >= pontuacaoVitoria) {
       setMensagem("Jogador 2 venceu");
       setVezAtual(true);
       setFimDeJogo(true);
+      setBloquearBotao(true);
     }
 
+    // jogada automática do computador
     if (computador === true && vezAtual === true && fimDeJogo === false) {
+      setBloquearBotao(true);
       setTimeout(() => {
         gerarNumeroAleatorio();
 
-        if (placarRodada >= 20) {
+        // passa a vez caso consiga mais de 15 pontos
+        if (placarRodada >= 15) {
           passarVez();
         }
       }, 1000);
+    }
+
+    // habilita os botôes na vez do jogador 1 contra o computador
+    if (computador === true && vezAtual === false && fimDeJogo === false) {
+      setBloquearBotao(false);
     }
   }, [placarRodada, vezAtual]);
 
@@ -66,6 +82,7 @@ function App() {
         setVezAtual(!vezAtual);
       }
     }
+
     setPlacarRodada(0);
   };
 
@@ -85,10 +102,7 @@ function App() {
     setPlacarJogadorUm(0);
     setPlacarJogadorDois(0);
     setVezAtual(false);
-  };
-
-  const escolherOponente = () => {
-    setComputador(!computador);
+    setBloquearBotao(false);
   };
 
   return (
@@ -123,7 +137,7 @@ function App() {
             <h3>{placarJogadorDois}</h3>
           </div>
           <div className="info-jogo">
-            <button onClick={gerarNumeroAleatorio} disabled={fimDeJogo}>
+            <button onClick={gerarNumeroAleatorio} disabled={bloquearBotao}>
               Jogue os dados
             </button>
 
@@ -150,7 +164,7 @@ function App() {
               </div>
             )}
 
-            <button onClick={passarVez} disabled={fimDeJogo}>
+            <button onClick={passarVez} disabled={bloquearBotao}>
               Passar vez
             </button>
             <button onClick={jogarNovamente}>Reiniciar</button>
