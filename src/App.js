@@ -86,11 +86,11 @@ function App() {
           <button onClick={abrirModal}>como jogar</button>
         </div>
         <div className="partida">
-          <div className="jogadorUm">
+          <div className={`jogadorUm ${vezAtual ? "" : "vez-atual"}`}>
             <h3>Jogador 1 </h3>
             <h3>{placarJogadorUm}</h3>
           </div>
-          <div className="jogadorDois">
+          <div className={`jogadorDois ${vezAtual ? "vez-atual" : ""}`}>
             <h3>Jogador 2 </h3>
             <h3>{placarJogadorDois}</h3>
           </div>

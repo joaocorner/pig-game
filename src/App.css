@@ -63,6 +63,10 @@ button:disabled {
   order: 1;
 }
 
+.vez-atual {
+  color: white;
+}
+
 .jogadorDois {
   width: 20vw;
   order: 3;
