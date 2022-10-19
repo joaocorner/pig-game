@@ -11,6 +11,7 @@ function App() {
   const [mensagem, setMensagem] = useState("");
   const [fimDeJogo, setFimDeJogo] = useState(false);
   const [modal, setModal] = useState(false);
+  const pontuacaoVitoria = 10;
 
   // gera um número entre 1 e 6
   const gerarNumeroAleatorio = () => {
@@ -30,11 +31,11 @@ function App() {
 
   // anunciando o vencedor
   useEffect(() => {
-    if (placarJogadorUm >= 20) {
-      setMensagem("Jogador UM venceu!");
+    if (placarJogadorUm >= pontuacaoVitoria) {
+      setMensagem("Jogador 1 venceu");
       setFimDeJogo(true);
-    } else if (placarJogadorDois >= 20) {
-      setMensagem("Jogador DOIS venceu!");
+    } else if (placarJogadorDois >= pontuacaoVitoria) {
+      setMensagem("Jogador 2 venceu");
       setFimDeJogo(true);
     }
   }, [placarRodada]);
@@ -43,12 +44,12 @@ function App() {
     // salva os pontos na vez do jogador que passou
     if (!vezAtual) {
       setPlacarJogadorUm(placarJogadorUm + placarRodada);
-      if (placarJogadorUm <= 20) {
+      if (placarJogadorUm <= pontuacaoVitoria) {
         setVezAtual(!vezAtual);
       }
     } else {
       setPlacarJogadorDois(placarJogadorDois + placarRodada);
-      if (placarJogadorDois <= 20) {
+      if (placarJogadorDois <= pontuacaoVitoria) {
         setVezAtual(!vezAtual);
       }
     }
@@ -74,42 +75,62 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Pig Game</h1>
-      <button onClick={abrirModal}>como jogar</button>
-      <br />
-      <img
-        src={process.env.PUBLIC_URL + `/img/pig.png`}
-        style={{ width: "300px", height: "300px" }}
-        alt="porco de óculos e gravata em cartoon segurando um dado"
-      />
-      <br />
-      <button className="" onClick={gerarNumeroAleatorio} disabled={fimDeJogo}>
-        Role os dados!
-      </button>
-      <br />
-      {numeroGerado === 0 ? (
-        ""
-      ) : (
-        <img
-          src={process.env.PUBLIC_URL + `/img/dice-${numeroGerado}.png`}
-          style={{ width: "100px", height: "100px" }}
-          alt="valor gerado pelo dado"
-        />
-      )}
+      <h1 className="titulo-jogo">Pig Game</h1>
+      <div className="conteudo">
+        <div className="ilustracao">
+          <img
+            src={process.env.PUBLIC_URL + `/img/pig.png`}
+            style={{}}
+            alt="porco de óculos e gravata em cartoon segurando um dado"
+          />
+          <button onClick={abrirModal}>como jogar</button>
+        </div>
+        <div className="partida">
+          <div className="jogadorUm">
+            <h3>Jogador 1 </h3>
+            <h3>{placarJogadorUm}</h3>
+          </div>
+          <div className="jogadorDois">
+            <h3>Jogador 2 </h3>
+            <h3>{placarJogadorDois}</h3>
+          </div>
+          <div className="info-jogo">
+            <button onClick={gerarNumeroAleatorio} disabled={fimDeJogo}>
+              Jogue os dados
+            </button>
 
-      {!vezAtual && !fimDeJogo && <p>Jogador um rodada: {placarRodada}</p>}
-      {vezAtual && !fimDeJogo && <p>Jogador dois rodada: {placarRodada}</p>}
+            {numeroGerado === 0 ? (
+              ""
+            ) : (
+              <img
+                src={process.env.PUBLIC_URL + `/img/dice-${numeroGerado}.png`}
+                style={{ width: "70px", height: "70px" }}
+                alt="valor gerado pelo dado"
+              />
+            )}
 
-      <p>Jogador um: {placarJogadorUm}</p>
-      <p>Jogador dois: {placarJogadorDois}</p>
-      <button onClick={passarVez} disabled={fimDeJogo}>
-        Passar vez
-      </button>
-      <br />
+            {!vezAtual && !fimDeJogo && (
+              <div>
+                <p>Jogador 1</p>
+                <p>ponto acumulado {placarRodada}</p>
+              </div>
+            )}
+            {vezAtual && !fimDeJogo && (
+              <div>
+                <p>Jogador 2 </p>
+                <p>ponto acumulado {placarRodada}</p>
+              </div>
+            )}
 
-      <button onClick={jogarNovamente}>Reiniciar</button>
-      {modal && <Modal fecharModal={fecharModal} />}
-      <p>{mensagem}</p>
+            <button onClick={passarVez} disabled={fimDeJogo}>
+              Passar vez
+            </button>
+            <button onClick={jogarNovamente}>Reiniciar</button>
+            {modal && <Modal fecharModal={fecharModal} />}
+            <p>{mensagem}</p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

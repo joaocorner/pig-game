@@ -1,3 +1,111 @@
 .App {
+  display: flex;
+  justify-content: center;
   text-align: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.titulo-jogo {
+  border: 1px solid black;
+  padding: 2vh 0;
+  margin-top: 0;
+  background: #f2911b;
+  color: black;
+}
+
+.conteudo {
+  display: flex;
+  align-items: center;
+  height: 89vh;
+}
+
+.ilustracao {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ilustracao img {
+  max-width: 60%;
+  max-height: 60%;
+  padding: 8vh 4vw;
+}
+
+button {
+  width: 170px;
+  background: #8c1818;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+button:hover {
+  box-shadow: 0 0 7px black;
+}
+
+button:disabled {
+  background: #a1a2a6;
+  color: #024959;
+  box-shadow: none;
+}
+
+.partida {
+  display: flex;
+  height: 70vh;
+  align-items: center;
+}
+
+.jogadorUm {
+  width: 20vw;
+  order: 1;
+}
+
+.jogadorDois {
+  width: 20vw;
+  order: 3;
+}
+
+.info-jogo {
+  width: 20vw;
+  height: 60vh;
+  order: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+  .App {
+    height: 100vh;
+  }
+
+  .ilustracao img {
+    width: 100px;
+    height: 100px;
+    padding: 15px;
+  }
+  .conteudo {
+    flex-direction: inherit;
+  }
+
+  .partida {
+    flex-direction: inherit;
+  }
+  .jogadorUm {
+    width: 100%;
+    order: 1;
+  }
+  .jogadorDois {
+    width: 100%;
+    order: 2;
+  }
+
+  .info-jogo {
+    width: 100%;
+    order: 3;
+  }
 }

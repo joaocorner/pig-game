@@ -77,7 +77,7 @@ Se houver algum erro, irá ser reportado no console.
   - [x] Zera o valor do dado
   ***
   Em paralelo:
-- [ ] Criar Layout
-  - [ ] Responsivo
+- [x] Criar Layout
+  - [x] Responsivo
 - [x] Modal explicando as regras
 - [ ] Oponente sendo IA
