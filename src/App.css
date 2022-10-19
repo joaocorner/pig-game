@@ -52,9 +52,6 @@ button:disabled {
   box-shadow: none;
 }
 
-/* .oponente {
-  display: flex;
-} */
 .partida {
   display: flex;
   height: 70vh;
@@ -87,7 +84,7 @@ button:disabled {
 
 @media (max-width: 768px) {
   .App {
-    height: 100vh;
+    /* height: 100vh; */
   }
 
   .ilustracao img {

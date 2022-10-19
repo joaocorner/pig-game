@@ -3,14 +3,22 @@
   src: local("MyFont"), url(./fonts/zig_____.ttf) format("truetype");
 }
 
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: linear-gradient(0deg, #0a7338, #034018);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
 body {
   margin: 0;
   font-family: "MyFont", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: linear-gradient(0deg, #0a7338, #034018);
-  background-repeat: no-repeat;
-  background-size: cover;
+  height: 100%;
 }
 
 button {
