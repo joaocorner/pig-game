@@ -108,4 +108,8 @@ button:disabled {
     width: 100%;
     order: 3;
   }
+
+  .mensagemFinal {
+    padding-bottom: 30px;
+  }
 }
