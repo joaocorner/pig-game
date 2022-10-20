@@ -151,18 +151,7 @@ function App() {
               />
             )}
 
-            {!vezAtual && !fimDeJogo && (
-              <div>
-                <p>Jogador 1</p>
-                <p>ponto acumulado {placarRodada}</p>
-              </div>
-            )}
-            {vezAtual && !fimDeJogo && (
-              <div>
-                <p>Jogador 2 </p>
-                <p>ponto acumulado {placarRodada}</p>
-              </div>
-            )}
+            <p>ponto acumulado {placarRodada}</p>
 
             <button onClick={passarVez} disabled={bloquearBotao}>
               Passar vez
