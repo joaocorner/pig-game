@@ -101,6 +101,7 @@ function App() {
     setNumeroGerado(0);
     setPlacarJogadorUm(0);
     setPlacarJogadorDois(0);
+    setPlacarRodada(0);
     setVezAtual(false);
     setBloquearBotao(false);
   };
