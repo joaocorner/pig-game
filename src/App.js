@@ -124,6 +124,7 @@ function App() {
               name="adversario"
               id="computador"
               value="computador"
+              disabled={numeroGerado > 0 ? true : false}
             />
             computador
           </div>
